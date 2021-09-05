@@ -17,7 +17,8 @@ namespace Kairo_Internet.BrowserTabStrip {
 			Renderer = renderer;
 		}
 
-		public void CalcBounds(BrowserTabStripItem tab) {
+		public void CalcBounds(BrowserTabStripItem tab)
+		{
 			Rect = new Rectangle((int)tab.StripRect.Right - 20, (int)tab.StripRect.Top + 5, 15, 15);
 			RedrawRect = new Rectangle(Rect.X - 2, Rect.Y - 2, Rect.Width + 4, Rect.Height + 4);
 		}

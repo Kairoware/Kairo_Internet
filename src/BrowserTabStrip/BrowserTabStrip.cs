@@ -39,7 +39,7 @@ namespace Kairo_Internet.BrowserTabStrip {
 
 		private bool menuOpen;
 
-		public int MaxTabSize = 200;
+		public int MaxTabSize = 100;
 
 		public int AddButtonWidth = 40;
 
@@ -267,10 +267,10 @@ namespace Kairo_Internet.BrowserTabStrip {
 			Rectangle clientRectangle = base.ClientRectangle;
 			clientRectangle.Width--;
 			clientRectangle.Height--;
-			DEF_START_POS = 10;
+			DEF_START_POS = 20;
 			e.Graphics.DrawRectangle(SystemPens.ControlDark, clientRectangle);
 			e.Graphics.FillRectangle(Brushes.White, clientRectangle);
-			e.Graphics.FillRectangle(SystemBrushes.GradientInactiveCaption, new Rectangle(clientRectangle.X, clientRectangle.Y, clientRectangle.Width, 28));
+			e.Graphics.FillRectangle(SystemBrushes.GradientInactiveCaption, new Rectangle(clientRectangle.X, clientRectangle.Y, clientRectangle.Width, 8));
 			e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
 			for (int i = 0; i < Items.Count; i++) {
 				BrowserTabStripItem fATabStripItem = Items[i];

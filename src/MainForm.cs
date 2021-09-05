@@ -32,10 +32,10 @@ namespace Kairo_Internet {
 		public static string AcceptLanguage = "pt-br,pt-br;q=0.9";
 		public static string HomepageURL = "https://www.google.com";
 		public static string NewTabURL = "about:blank";
-		public static string InternalURL = "Kairo";
-		public static string DownloadsURL = "Kairo://storage/downloads.html";
-		public static string FileNotFoundURL = "Kairo://storage/errors/notFound.html";
-		public static string CannotConnectURL = "Kairo://storage/errors/cannotConnect.html";
+		public static string InternalURL = "Kairo_internet";
+		public static string DownloadsURL = "Kairo_internet://storage/downloads.html";
+		public static string FileNotFoundURL = "Kairo_internet://storage/errors/notFound.html";
+		public static string CannotConnectURL = "Kairo_internet://storage/errors/cannotConnect.html";
 		public static string SearchURL = "https://www.google.com/search?q=";
 
 		public bool WebSecurity = true;
