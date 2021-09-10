@@ -1,7 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System;
 using EasyTabs;
 
-namespace Kairo_Internet
+
+namespace Kairo_Internet_source
 {
     public partial class Conteiner : TitleBarTabs
     {
@@ -17,7 +21,7 @@ namespace Kairo_Internet
             {
                 Content = new Form1
                 {
-                   Text = "Inicio"
+                    Text = "Nova aba"
                 }
             };
         }

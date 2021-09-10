@@ -1,5 +1,5 @@
 ﻿
-namespace Kairo_Internet
+namespace Kairo_Internet_source
 {
     partial class Conteiner
     {
@@ -35,7 +35,7 @@ namespace Kairo_Internet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1366, 720);
             this.Name = "Conteiner";
             this.Text = "Conteiner";
             this.Load += new System.EventHandler(this.Conteiner_Load);
