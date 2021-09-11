@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System;
+using CefSharp;
 using EasyTabs;
 
 
@@ -13,6 +14,7 @@ namespace Kairo_Internet_source
         {
             InitializeComponent();
             TabRenderer = new ChromeTabRenderer(this);
+            this.Closing += OnFormClosing;
         }
 
         public override TitleBarTab CreateTab()
@@ -29,6 +31,11 @@ namespace Kairo_Internet_source
         private void Conteiner_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void OnFormClosing(object sender, EventArgs e)
+        {
+            Cef.Shutdown();
         }
     }
 }

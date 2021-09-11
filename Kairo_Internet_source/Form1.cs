@@ -5,15 +5,18 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.IO;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CefSharp.WinForms;
 using CefSharp;
+using EasyTabs;
 
 namespace Kairo_Internet_source
 {
     public partial class Form1 : Form
     {
+
         public readonly ChromiumWebBrowser browser;
 
        
@@ -21,24 +24,31 @@ namespace Kairo_Internet_source
         public Form1()
         {
             InitializeComponent();
-
-            CefSettings settings = new CefSettings();
+         
+            var cachePath = Path.GetFullPath("cache\\global");
+            var requestContextSettings = new RequestContextSettings { CachePath = cachePath };
 
             
-         
+
+
+
+
+           
+
+
             Text = "Home";
             WindowState = FormWindowState.Maximized;
-           
-            browser = new ChromiumWebBrowser("https://kairoware.ml/ks");
-            browser.RequestContext = new RequestContext(new RequestContextSettings { CachePath =  Application.StartupPath + "/cache1" });
 
-            Cef.Initialize(settings);
+            browser = new ChromiumWebBrowser("https://kairoware.ml/ks");
+
+
+            browser.RequestContext = new CefSharp.RequestContext(requestContextSettings);
 
             panel2.Controls.Add(browser);
 
            
 
-            var version = string.Format("Chromium: {0}, CEF: {1}, CefSharp: {2}",
+            var version = string.Format("KairoInternet: {0}, CEF: {1}, CefSharp: {2}",
                Cef.ChromiumVersion, Cef.CefVersion, Cef.CefSharpVersion);
 
                 browser.TitleChanged += OnBrowserTitleChanged;
@@ -114,12 +124,18 @@ namespace Kairo_Internet_source
 
         private void button2_Click(object sender, EventArgs e)
         {
-            browser.Update();
+            browser.Refresh();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             browser.Forward();
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+           
+        
         }
     }
 }
