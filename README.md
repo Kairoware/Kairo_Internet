@@ -7,4 +7,4 @@ O corção do projeto é uma Bliblioteca chamada [Cefsharp](https://github.com/c
 
 # Licenças
 
-Kairo Internet é Licenciado Sobre GPL3 maispara não restar duvidas consulte. [License](https://github.com/Kairoware/Kairo_Internet/tree/main/License)
+Kairo Internet é Licenciado Sobre GPL3 mais para não restar duvidas consulte. [License](https://github.com/Kairoware/Kairo_Internet/tree/main/License)
